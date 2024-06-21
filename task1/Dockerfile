@@ -1,13 +1,13 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 RUN apt-get update && apt-get upgrade -y && \
-	apt-get install -y python3 python3-pip && \
-	pip3 install flask
+	apt-get install -y python3 python3-pip
+RUN pip3 install Flask
 
 WORKDIR /app
 
-COPY api.py /app/api.py
+COPY api.py /app/
 
 EXPOSE 5252
 
-CMD [ "python3", "api.py" ]
+CMD [ "python3", "./api.py" ]
