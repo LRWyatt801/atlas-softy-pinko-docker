@@ -1,0 +1,1 @@
+Creating first Docker image.  Just simple one that will echo "Hello, World!"
